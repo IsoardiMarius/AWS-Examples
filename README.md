@@ -1,3 +1,3 @@
 # AWS-Examples
 
-Examples for all AWS lab
+A Codebase okf all the AWS Examples used through AWS Certifications Study Courses.
