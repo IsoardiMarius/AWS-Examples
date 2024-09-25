@@ -1,13 +1,17 @@
 tasks:
   - name: aws-cli
-    env: 
+    env:
+      # Active les prompts automatiques pour l'interface AWS CLI, pratique pour compléter des commandes partiellement tapées.
       AWS_CLI_AUTO_PROMPT: on-partial
 
+    # Accède au répertoire de travail
+    # Télécharge l'archive de l'AWS CLI v2
+    # Décompresse l'archive téléchargée
+    # Installe AWS CLI avec les privilèges sudo
+    # Retourne au répertoire racine de l'environnement de développement
     before: |
       cd /workspace
       curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
       unzip awscliv2.zip
       sudo ./aws/install
       cd $THEIA_WORKSPACE_ROOT
-
-      
